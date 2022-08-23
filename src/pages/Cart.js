@@ -42,60 +42,6 @@ export default function Cart() {
     getCart();
   }, []);
 
-  // subtotal
-  // let resultTotal = cart?.reduce((a, b) => {
-  //   return a + b.subtotal;
-  // }, 0);
-
-  // remove
-
-  // let handleDelete = async (id) => {
-  //   console.log(id);
-  //   await API.delete(`/cart/` + id);
-  //   refetch();
-  // };
-
-  // pay
-  // const form = {
-  //   status: "pending",
-  //   total: resultTotal,
-  // };
-  // const handleSubmit = useMutation(async (e) => {
-  //   const config = {
-  //     headers: {
-  //       "Content-type": "application/json",
-  //     },
-  //   };
-  //   // Insert transaction data
-  //   // const body = JSON.stringify(form);
-
-  //   // const response = await API.patch("/transaction", body, config);
-  //   // console.log(response.data.data.token);
-
-  //   // const token = response.data.data.token;
-
-  //   window.snap.pay(token, {
-  //     onSuccess: function (result) {
-  //       /* You may add your own implementation here */
-  //       console.log(result);
-  //       navigate("/profile");
-  //     },
-  //     onPending: function (result) {
-  //       /* You may add your own implementation here */
-  //       console.log(result);
-  //       navigate("/profile");
-  //     },
-  //     onError: function (result) {
-  //       /* You may add your own implementation here */
-  //       console.log(result);
-  //     },
-  //     onClose: function () {
-  //       /* You may add your own implementation here */
-  //       alert("you closed the popup without finishing the payment");
-  //     },
-  //   });
-  // });
-  //
 
   let resultTotal = carts?.reduce((a, b) => {
     return a + b.subtotal;
@@ -230,11 +176,12 @@ export default function Cart() {
                   <p>Qty</p>
                   {/* <p>{qty}</p> */}
                 </Col>
-                <hr />
-                
                 </>
                   )
                 })}
+                <hr />
+                
+                
 
                 <Col className="d-flex justify-content-between">
                   <p>Total</p>
